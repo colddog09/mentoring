@@ -40,7 +40,7 @@ export const TOPICS: Topic[] = [
     short: "AI랑 같이 만드는 새로운 코딩",
     group: "시작하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="What is this"
           title="바이브코딩이 대체 뭐예요?"
@@ -80,7 +80,7 @@ export const TOPICS: Topic[] = [
     short: "Warp · Claude Code · 명령어 기초",
     group: "시작하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Concept · 도구"
           title="우리가 쓰는 도구 3총사"
@@ -134,7 +134,7 @@ export const TOPICS: Topic[] = [
     short: "실행 전에 계획부터 보기",
     group: "시작하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle kicker="Concept · 안전 모드" title="왜 Plan Mode를 쓸까?" />
         <VS
           left={
@@ -179,7 +179,7 @@ export const TOPICS: Topic[] = [
     short: "프로필 사이트를 말로 제작",
     group: "만들고 공개하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Hands-on"
           title="사이트 만들기 — 말로 시키는 순서"
@@ -222,7 +222,7 @@ export const TOPICS: Topic[] = [
     short: "Supabase 서버 창고에 올리기",
     group: "만들고 공개하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Concept · 데이터베이스"
           title="사진은 어디에 저장될까?"
@@ -272,7 +272,7 @@ export const TOPICS: Topic[] = [
     short: "공개 키 vs 비밀 키, RLS",
     group: "만들고 공개하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Security · 꼭 알아야 해요"
           title="키에는 두 종류가 있다"
@@ -327,7 +327,7 @@ export const TOPICS: Topic[] = [
     short: "Vercel로 전 세계에 공개",
     group: "만들고 공개하기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Concept · 배포"
           title="이제 전 세계에 공개! — 배포(Deploy)"
@@ -375,7 +375,7 @@ export const TOPICS: Topic[] = [
     short: "AI를 더 똑똑하게 만드는 도구",
     group: "AI 고수되기",
     Content: () => (
-      <div className="space-y-6">
+      <div>
         <SectionTitle
           kicker="Concept 01"
           title="플러그인 vs 스킬"
@@ -431,19 +431,9 @@ export const TOPICS: Topic[] = [
     short: "AI가 잘 일하는 환경 설계",
     group: "AI 고수되기",
     Content: () => (
-      <div className="space-y-6">
-        <SectionTitle
-          kicker="Why harness"
-          title=”해줘 vs 환경을 만들어줘”
-          desc="같은 AI라도, 어떻게 일을 시키느냐에 따라 결과가 완전히 달라져요. 이게 진짜 고수의 비밀!"
-        />
-        <p>나쁜 방식: AI가 만듦 - 아닌데 - 다시 시킴 - 시간만 날림.</p>
-        <p>좋은 방식: AI가 일관되게 좋은 결과를 내요. 한 번 만들어두면 계속 편해요.</p>
-        <Callout variant=”info”>
-          모델을 바꿔서 5% 좋아지는 것보다, <b>환경(하네스)을 설계해서 15% 좋아지는 게</b> 더 현실적이다.
-        </Callout>
-
-        <SectionTitle kicker="Framework" title="하네스의 6가지 축" desc="좋은 환경은 이 6가지로 이루어져요. 카드를 눌러 설명을 펼쳐보세요!" />
+      <div>
+        <div>Harness Engineering</div>
+        <div>Same AI, different results based on how you use it</div>
         <AxisCards />
 
         <SectionTitle kicker="Karpathy" title="카파시 4원칙 — 65줄이 세상을 바꿨다" desc="단순함이 미덕이 아니라, 단순함이 작동의 조건이다." />
