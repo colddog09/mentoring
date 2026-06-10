@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowDown, ArrowLeft, ArrowRight, Rocket, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { GridBackground } from "@/components/GridBackground";
 import { TOPICS, GROUPS } from "@/data/topics";
 import { cn } from "@/lib/utils";
@@ -37,11 +37,10 @@ export default function App() {
       <GridBackground className="h-screen flex flex-col items-center justify-center" reveal={320}>
         <div className="flex flex-col items-center text-center px-4 max-w-3xl mx-auto space-y-6">
           <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[3px] uppercase text-accent border border-border bg-card/70 px-4 py-1.5 rounded-full backdrop-blur">
-            <Sparkles size={13} /> Vibe Coding · For Teens
+            Vibe Coding · For Teens
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm">
-            바이브코딩 교실{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">🚀</span>
+            바이브코딩 교실
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
             코드 한 줄 안 치고, AI랑 같이 진짜 사이트를 만든다. <br />
@@ -52,7 +51,7 @@ export default function App() {
               onClick={scrollToLearn}
               className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-md hover:bg-primary/90 transition-all shadow-md active:scale-95"
             >
-              <Rocket size={18} /> 배우러 가기
+              배우러 가기
             </button>
             <button
               onClick={() => setInteract((c) => c + 1)}
@@ -62,7 +61,7 @@ export default function App() {
             </button>
           </div>
           <button onClick={scrollToLearn} className="mt-6 text-muted-foreground hover:text-foreground transition-colors animate-bounce">
-            <ArrowDown />
+            ↓
           </button>
         </div>
       </GridBackground>
@@ -73,7 +72,6 @@ export default function App() {
         <nav className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-lg">
           <div className="max-w-5xl mx-auto px-4 py-3">
             <div className="flex items-center gap-2 mb-2.5">
-              <span className="text-lg">🚀</span>
               <b className="text-sm">바이브코딩 교실</b>
               <span className="text-xs text-muted-foreground font-mono">· 주제별 학습</span>
             </div>
@@ -128,7 +126,7 @@ export default function App() {
               className="text-left rounded-xl border border-border p-4 hover:border-primary disabled:opacity-30 disabled:hover:border-border transition-colors"
             >
               <div className="font-mono text-xs text-muted-foreground flex items-center gap-1">
-                <ArrowLeft size={12} /> 이전 주제
+                ← 이전 주제
               </div>
               <div className="font-bold mt-1 truncate">{active > 0 ? TOPICS[active - 1].title : "—"}</div>
             </button>
@@ -138,7 +136,7 @@ export default function App() {
               className="text-right rounded-xl border border-border p-4 hover:border-primary disabled:opacity-30 disabled:hover:border-border transition-colors"
             >
               <div className="font-mono text-xs text-muted-foreground flex items-center justify-end gap-1">
-                다음 주제 <ArrowRight size={12} />
+                다음 주제 →
               </div>
               <div className="font-bold mt-1 truncate">
                 {active < TOPICS.length - 1 ? TOPICS[active + 1].title : "—"}
